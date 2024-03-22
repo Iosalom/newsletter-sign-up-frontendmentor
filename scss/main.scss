@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+// Variables
+////////////
+// #Primary colors
+$tomato-col: hsl(4, 100%, 67%);
+$tomato-col-dark: hsl(338, 100%, 67%);
+
+// #Nutral colors
+$dark-slate-gray: hsl(234, 29%, 20%);
+$charcoal-rey: hsl(235, 18%, 26%);
+$grey-col: hsl(231, 7%, 60%);
+$white-col: hsl(0, 0%, 100%);
+// Font size
+$paragaraph-font: 16px;
+
+// Maps
+///////
+// Font weights
+$font-weigths: (
+  'regular': 400,
+  'bold': 700,
+);
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background: $charcoal-rey;
+  overflow-x: hidden;
+}
+
+main {
+  background: $white-col;
+  border-radius: 40px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: rgb(245, 245, 245);
+}
+.attribution a {
+  color: hsl(228, 100%, 80%);
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-error {
+  color: $tomato-col;
+}
+.email-address-styles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+// Nesting
+//////////
+.img-div {
+  img {
+    height: 600px;
+  }
+}
+
+.cont-inner-div {
+  display: flex;
+  gap: 40px;
+}
+.cont-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+
+  // Nesting
+  //////////
+  h2 {
+    font-size: 48px;
+    color: $dark-slate-gray;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: $paragaraph-font;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .sub-btn-div {
+    margin-top: 20px;
+  }
+  .sub-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul {
+    margin: 20px 0 40px;
+
+    li {
+      margin-top: 20px;
+    }
+  }
+}
+
+.input-div p {
+  font-size: 12px;
+  font-weight: map-get($font-weigths, bold);
+  color: $dark-slate-gray;
+}
+.input-div input {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid $dark-slate-gray;
+}
+
+.input-div div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  input {
+    padding: 20px;
+    font-size: $paragaraph-font;
+    font-weight: map-get($font-weigths, 'regular');
+    border: 2px solid $grey-col;
+    transition: 0.1s ease-out;
+    outline: none;
+  }
+  input:hover {
+    border: 2px solid $dark-slate-gray;
+  }
+
+  .email-input-error {
+    border: 2px solid $tomato-col;
+    background: lighten($color: $tomato-col, $amount: 25);
+    color: $tomato-col;
+  }
+  .email-input-error:hover {
+    border: 2px solid $tomato-col;
+  }
+}
+.input-div input,
+.sub-btn-div button {
+  height: 60px;
+  width: 357.483px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.sub-btn-div button {
+  background: linear-gradient(to left, $dark-slate-gray, $dark-slate-gray);
+  color: $white-col;
+  border: none;
+  font-weight: map-get($font-weigths, 'bold');
+  font-size: $paragaraph-font;
+}
+.sub-btn-div button:hover {
+  background-image: linear-gradient(to left, $tomato-col, $tomato-col-dark);
+  filter: drop-shadow(10px 5px 10px $tomato-col);
+}
+
+.success-msg-styles {
+  width: 450px;
+  background: $white-col;
+  padding: 40px;
+  border-radius: 40px;
+}
+.success-msg-content {
+  img {
+    width: 50px;
+  }
+  h2 {
+    font-size: 44px;
+    font-weight: map-get($font-weigths, 'bold');
+  }
+  p {
+    font-weight: map-get($font-weigths, 'regular');
+  }
+  h2,
+  p,
+  button {
+    margin-top: 30px;
+  }
+  button {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(to left, $dark-slate-gray, $dark-slate-gray);
+    color: $white-col;
+    border: none;
+    font-weight: map-get($font-weigths, 'bold');
+    font-size: $paragaraph-font;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-image: linear-gradient(to left, $tomato-col, $tomato-col-dark);
+      filter: drop-shadow(10px 5px 10px $tomato-col);
+    }
+  }
+}
+
+.success-msg-content,
+.success-msg-styles {
+  transition: 0.3s ease;
+}
+@media (max-width: 942px) {
+  .cont-inner-div {
+    flex-direction: column-reverse;
+  }
+  .cont-section {
+    margin-left: 0;
+    padding: 25px;
+  }
+  .input-div input,
+  .sub-btn-div button {
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .sub-btn-div button {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 562px) {
+  .success-msg-styles {
+    height: 100vh;
+
+    img {
+      margin-top: 100px;
+      width: 70px;
+    }
+    button {
+      margin-top: 80%;
+    }
+  }
+}
+@media (max-width: 442px) {
+  .cont-section {
+    h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 14px;
+
+      gap: 20px;
+    }
+    .sub-btn-div {
+      margin-top: 20px;
+    }
+  }
+
+  .input-div p {
+    font-size: 12px;
+  }
+
+  .input-div div:nth-child(2) {
+    input {
+      padding-left: 20px;
+      height: 50px;
+      font-size: 14px;
+    }
+  }
+  .sub-btn-div button {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .success-msg-styles {
+    img {
+      margin-top: 100px;
+      width: 60px;
+    }
+  }
+  .success-msg-styles {
+    width: 450px;
+    padding: 40px;
+    border-radius: 40px;
+  }
+  .success-msg-content {
+    h2 {
+      font-size: 42px;
+    }
+    p {
+      font-weight: map-get($font-weigths, 'regular');
+      font-size: 14px;
+    }
+    button {
+      height: 50px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      margin-top: 80%;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .cont-section {
+    padding: 0 60px 0;
+  }
+  .success-msg-content {
+    padding: 0 30px 0;
+  }
+}
+@media (max-width: 360px) {
+  .success-msg-content {
+    padding: 0 50px 0;
+  }
+}
