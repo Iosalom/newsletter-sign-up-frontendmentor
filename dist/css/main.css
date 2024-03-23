@@ -54,10 +54,6 @@ main {
   padding: 20px;
 }
 
-.img-div img {
-  height: 600px;
-}
-
 .cont-inner-div {
   display: flex;
   gap: 40px;
@@ -199,9 +195,21 @@ main {
   transition: 0.3s ease;
 }
 
+.img-div .be-shown {
+  display: none;
+}
+
 @media (max-width: 942px) {
+  .img-div .be-hidden {
+    display: none;
+  }
+  .img-div .be-shown {
+    display: block;
+    width: 500px;
+  }
   .cont-inner-div {
     flex-direction: column-reverse;
+    gap: 0;
   }
   .cont-section {
     margin-left: 0;
@@ -218,7 +226,25 @@ main {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 562px) {
+@media (max-width: 506px) {
+  .cont-section {
+    margin: 0 100px;
+  }
+  .cont-section h2 {
+    font-size: 2.5rem;
+  }
+  .cont-section p {
+    font-size: 1rem;
+  }
+  .cont-section ul li {
+    word-wrap: break-word;
+  }
+  .input-div .email-address-styles {
+    font-size: 0.8rem;
+  }
+  .sub-btn-div button {
+    font-size: 14px;
+  }
   .success-msg-styles {
     height: 100vh;
   }
@@ -230,64 +256,26 @@ main {
     margin-top: 80%;
   }
 }
-@media (max-width: 442px) {
-  .cont-section h2 {
+@media (max-width: 420px) {
+  .success-msg-styles {
+    padding: 0 100px;
+    height: 100vh;
+  }
+  .success-msg-styles h2 {
     font-size: 40px;
-    margin-bottom: 20px;
+    line-break: auto;
   }
-  .cont-section p {
-    font-size: 14px;
-    gap: 20px;
+  .success-msg-styles p {
+    font-size: 16px;
   }
-  .cont-section .sub-btn-div {
-    margin-top: 20px;
-  }
-  .input-div p {
-    font-size: 12px;
-  }
-  .input-div div:nth-child(2) input {
-    padding-left: 20px;
-    height: 50px;
-    font-size: 14px;
-  }
-  .sub-btn-div button {
-    height: 50px;
+  .success-msg-styles button {
     font-size: 14px;
   }
   .success-msg-styles img {
     margin-top: 100px;
-    width: 60px;
+    width: 70px;
   }
-  .success-msg-styles {
-    width: 450px;
-    padding: 40px;
-    border-radius: 40px;
-  }
-  .success-msg-content h2 {
-    font-size: 42px;
-  }
-  .success-msg-content p {
-    font-weight: 400;
-    font-size: 14px;
-  }
-  .success-msg-content button {
-    height: 50px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    margin-top: 80%;
-  }
-}
-@media (max-width: 420px) {
-  .cont-section {
-    padding: 0 60px 0;
-  }
-  .success-msg-content {
-    padding: 0 30px 0;
-  }
-}
-@media (max-width: 360px) {
-  .success-msg-content {
-    padding: 0 50px 0;
+  .success-msg-styles button {
+    margin-top: 270px;
   }
 }/*# sourceMappingURL=main.css.map */
