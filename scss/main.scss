@@ -219,14 +219,14 @@ main {
 .success-msg-styles {
   transition: 0.3s ease;
 }
-.be-shown {
-  display: none;
+.img-div .be-shown {
+  display: none !important;
 }
 @media (max-width: 942px) {
-  .be-hidden {
+  .img-div .be-hidden {
     display: none;
   }
-  .be-shown {
+  .img-div .be-shown {
     display: block;
     width: 500px;
   }
