@@ -220,7 +220,7 @@ main {
   transition: 0.3s ease;
 }
 .img-div .be-shown {
-  display: none !important;
+  display: none;
 }
 @media (max-width: 942px) {
   .img-div .be-hidden {
