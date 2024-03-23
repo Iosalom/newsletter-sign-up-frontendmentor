@@ -252,14 +252,13 @@ main {
     margin-top: 100px;
     width: 70px;
   }
-  .success-msg-styles button {
+  .success-msg-styles .success-msg-content button {
     margin-top: 80%;
   }
 }
 @media (max-width: 420px) {
   .success-msg-styles {
     padding: 0 100px;
-    height: 100vh;
   }
   .success-msg-styles h2 {
     font-size: 40px;
